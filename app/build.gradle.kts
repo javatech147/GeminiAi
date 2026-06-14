@@ -23,11 +23,22 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isDebuggable = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            buildConfigField("String", "GEMINI_AI_API_KEY", "\"${project.findProperty("GEMINI_AI_API_KEY")}\"")
+            buildConfigField("String", "GEMINI_API_BASE_URL", "\"https://generativelanguage.googleapis.com/\"")
+        }
+
+        debug {
+            applicationIdSuffix = ".debug"
+            isMinifyEnabled = false
+            isDebuggable = true
+            buildConfigField("String", "GEMINI_AI_DEBUG_API_KEY", "\"${project.findProperty("GEMINI_AI_DEBUG_API_KEY")}\"")
+            buildConfigField("String", "GEMINI_API_BASE_URL", "\"https://generativelanguage.googleapis.com/\"")
         }
     }
     compileOptions {
@@ -36,6 +47,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 

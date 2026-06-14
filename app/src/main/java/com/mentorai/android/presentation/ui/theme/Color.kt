@@ -1,4 +1,4 @@
-package com.mentorai.android.ui.theme
+package com.mentorai.android.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
