@@ -64,9 +64,10 @@ dependencies {
     // Hilt
     implementation(libs.hilt.android)
     ksp(libs.dagger.hilt.android.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
 
     // ViewModel
-    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
 
     // Retrofit
     implementation(libs.retrofit.core)
