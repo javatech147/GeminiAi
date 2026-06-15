@@ -51,7 +51,7 @@ fun HomeScreen(modifier: Modifier) {
             .verticalScroll(rememberScrollState())
             .padding(horizontal = 16.dp)
     ) {
-        Text(text = "Ask me anything")
+        Text(text = "Ask me anything", modifier = Modifier.padding(top = 24.dp))
         OutlinedTextField(
             modifier = Modifier.fillMaxWidth(),
             value = query.value,
@@ -108,13 +108,15 @@ fun HomeScreen(modifier: Modifier) {
 
             is GeminiAiViewModel.GeminiAiResponseState.Error -> state.message
         }
-        Card(
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Text(
-                text = displayText,
-                modifier = Modifier.padding(16.dp)
-            )
+        if (displayText.isNotEmpty()) {
+            Card(
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text(
+                    text = displayText,
+                    modifier = Modifier.padding(16.dp)
+                )
+            }
         }
     }
 }
