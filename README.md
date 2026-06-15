@@ -17,4 +17,5 @@
 
 **Preview of the App:** 
 
-<img width="270" height="570" alt="image" src="https://github.com/user-attachments/assets/33e10ddd-7a5b-40d3-bd1a-1657990b243a" />
+https://github.com/user-attachments/assets/7fc6c410-e94c-4fb5-8e92-9f4c6e0e9939
+
